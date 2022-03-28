@@ -12,7 +12,7 @@ namespace SchoolManagementApi.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2", "value3", "value0" ,"ayni", "sid"};
+            return new string[] { "value1", "value2", "value3", "value0" ,"ayni", "sid","test"};
         }
 
         // GET api/values/5
