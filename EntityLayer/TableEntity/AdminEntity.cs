@@ -17,6 +17,13 @@ namespace EntityLayer.TableEntity
         public int Id;
         [JsonProperty("firstName")]
         public string FirstName;
-
+        [JsonProperty("lastName")]
+        public string LastName;
+        [JsonProperty("email")]
+        public string Email;
+        [JsonProperty("phone")]
+        public string Phone;
+        [JsonProperty("profilImageUrl")]
+        public string ProfilImageUrl;
     }
 }
