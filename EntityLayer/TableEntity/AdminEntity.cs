@@ -14,16 +14,16 @@ namespace EntityLayer.TableEntity
     {
         [Key]
         [JsonProperty("adminId")]
-        public int Id;
+        public int Id { get; set; }
         [JsonProperty("firstName")]
-        public string FirstName;
+        public string FirstName { get; set; }
         [JsonProperty("lastName")]
-        public string LastName;
+        public string LastName { get; set; }
         [JsonProperty("email")]
-        public string Email;
+        public string Email { get; set; }
         [JsonProperty("phone")]
-        public string Phone;
+        public string Phone { get; set; }
         [JsonProperty("profilImageUrl")]
-        public string ProfilImageUrl;
+        public string ProfilImageUrl { get; set; }
     }
 }

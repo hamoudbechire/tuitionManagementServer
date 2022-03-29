@@ -14,10 +14,10 @@ namespace EntityLayer.TableEntity
     {
         [Key]
         [JsonProperty("classId")]
-        public int Id;
+        public int Id { get; set; }
         [JsonProperty("numSalle")]
-        public string NumSalle;
+        public string NumSalle { get; set; }
         [JsonProperty("libre")]
-        public Boolean Libre; 
+        public Boolean Libre { get; set; } 
     }
 }
