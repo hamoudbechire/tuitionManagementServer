@@ -8,5 +8,6 @@ namespace DataLayer.DataProvider
 {
     class EtudiantProvider
     {
+
     }
 }
