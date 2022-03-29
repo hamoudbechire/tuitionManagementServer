@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using EntityLayer;
+using EntityLayer.TableEntity;
 
 namespace DataLayer
 {
@@ -27,5 +29,7 @@ namespace DataLayer
         {
             base.OnModelCreating(modelBuilder);
         }
+        public DbSet<MatiereEntity> matieres { get; set; }
+        public DbSet<ProffesseurEntity> proffesseurs { get; set; }
     }
 }

@@ -190,6 +190,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MatiereController.cs" />
+    <Compile Include="Controllers\ProffesseurConroller.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -286,6 +288,10 @@
     <ProjectReference Include="BusinessLayer\BusinessLayer.csproj">
       <Project>{b91aed67-ff6b-4935-b931-1cff445d0f7b}</Project>
       <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="EntityLayer\EntityLayer.csproj">
+      <Project>{26a0aa67-6d0c-4e44-a395-ec6e20761362}</Project>
+      <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
