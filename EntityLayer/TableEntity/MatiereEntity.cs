@@ -12,6 +12,10 @@ namespace EntityLayer.TableEntity
     [Table("Matiere")]
     internal class MatiereEntity
     {
-        
+        [Key]
+        public int IdMatiere { get; set; }
+        public string Name { get; set; }
+        public int IdClass { get; set; }
+        public int IdProf { get; set; }
     }
 }

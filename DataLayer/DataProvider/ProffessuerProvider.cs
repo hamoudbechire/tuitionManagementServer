@@ -9,6 +9,7 @@ namespace DataLayer.DataProvider
 {
 
     internal class ProffessuerProvider
-    {   
+    {
+        public int a;
     }
 }
