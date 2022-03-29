@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace EntityLayer.TableEntity
 {
     [Table("etudiant")]
@@ -20,6 +19,5 @@ namespace EntityLayer.TableEntity
         public string Phone { get; set; }
         [JsonProperty("classes")]
         public List<ClasseEntity> Classes { get; set; }
-
     }
 }

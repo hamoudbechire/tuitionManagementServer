@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DataProvider\AdminProvider.cs" />
+    <Compile Include="DataProvider\EtudiantProvider.cs" />
     <Compile Include="DataProvider\ProffessuerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolManagementApiContext.cs" />
