@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace EntityLayer.TableEntity
 {
     [Table("Matiere")]
-    internal class MatiereEntity
+    public class MatiereEntity
     {
         [Key]
         public int IdMatiere { get; set; }

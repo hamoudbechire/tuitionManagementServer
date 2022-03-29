@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace EntityLayer.TableEntity
 {
     [Table("Proffesseur")]
-    internal class ProffesseurEntity
+    public class ProffesseurEntity
     {
         [Key]
         [JsonProperty("profId")]
