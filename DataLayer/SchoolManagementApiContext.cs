@@ -9,7 +9,7 @@ namespace DataLayer
 {
     public class SchoolManagementApiContext: DbContext
     {
-        //public SchoolManagementApiContext() : base(DatabaseConnection.ConnectionString) { }
+        public SchoolManagementApiContext() : base(DatabaseConnection.ConnectionString) { }
 
         public SchoolManagementApiContext(string connectionstring) : base(connectionstring) { }
         public SchoolManagementApiContext(string connectionstring, bool lazyLoading, bool creationProxy) : base(connectionstring)

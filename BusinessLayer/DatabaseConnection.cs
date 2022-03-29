@@ -11,7 +11,7 @@ namespace BusinessLayer
 {
     public class DatabaseConnection
     {
-        private static object log;
+        //private static object log;
 
         public static string Directory { get { return DataLayer.DatabaseConnection.Directory; } }
         public static string DbName { get { return DataLayer.DatabaseConnection.DbName; } }
