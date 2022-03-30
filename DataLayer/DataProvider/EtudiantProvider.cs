@@ -16,7 +16,11 @@ namespace DataLayer.DataProvider
             if (etudiant == null)
                 return false;
 
-
+            using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
+            {
+                var list_classe = context.classes.ToList();
+                
+            }
             var result = DatabaseConnection.Add<EtudiantEntity>(etudiant);
             return result;
         }

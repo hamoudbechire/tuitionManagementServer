@@ -19,5 +19,12 @@ namespace SchoolManagementApi.Controllers
             return "je confirmation mon execution";
         }
 
+
+        [AllowAnonymous]
+        public List<EtudiantEntity> GetById(int id)
+        {
+            return ManageEtudiant.ListEtudiant(t => (t.EtudiantId == id));
+        }
+
     }
 }

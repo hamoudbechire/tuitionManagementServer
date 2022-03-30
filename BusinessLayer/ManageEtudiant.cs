@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataLayer;
 using DataLayer.DataProvider;
+using System.Linq.Expressions;
 
 namespace BusinessLayer
 {
@@ -16,5 +17,16 @@ namespace BusinessLayer
         {
             return EtudiantProvider.Add(etudiant);
         }
+
+        public static List<EtudiantEntity> ListEtudiant(Expression<Func<EtudiantEntity, bool>> condition)
+        {
+            return EtudiantProvider.List();
+        }
+
+        public static bool UpdateEtudiant(EtudiantEntity etudiant)
+        {
+            return EtudiantProvider.Modify(etudiant);
+        }
+        
     }
 }
