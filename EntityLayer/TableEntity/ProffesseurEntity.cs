@@ -11,8 +11,9 @@ namespace EntityLayer.TableEntity
     [Table("Proffesseur")]
     public class ProffesseurEntity
     {
-        [Key]
+        
         [JsonProperty("profId")]
+        [Key]
         public int ProfId { get; set; }
         [JsonProperty("firstName")]
         public string FirstName { get; set; }
@@ -23,6 +24,6 @@ namespace EntityLayer.TableEntity
         [JsonProperty("phone")]
         public string Phone { get; set; }
         [JsonProperty("matierId")]
-        public string matierId { get; set; }
+        public int matierId { get; set; }
     }
 }

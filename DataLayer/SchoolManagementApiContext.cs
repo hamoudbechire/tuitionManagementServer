@@ -30,6 +30,6 @@ namespace DataLayer
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<MatiereEntity> matieres { get; set; }
-        public DbSet<ProffesseurEntity> proffesseurs { get; set; }
+      //  public DbSet<ProffesseurEntity> proffesseurs { get; set; }
     }
 }

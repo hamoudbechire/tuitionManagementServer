@@ -49,9 +49,9 @@ namespace DataLayer
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
 
-                context.Entry<ProffesseurEntity>(proffesseur).State = System.Data.Entity.EntityState.Modified;
-                context.SaveChanges();
-                return true;
+             //   context.Entry<ProffesseurEntity>(proffesseur).State = System.Data.Entity.EntityState.Modified;
+              //  context.SaveChanges();
+                return true;   
             }
         }
 
@@ -70,8 +70,8 @@ namespace DataLayer
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                var list = context.proffesseurs.Where(condition).OrderByDescending(c => c.ProfId).ToList();
-                return list;
+               // var list = context.proffesseurs.Where(condition).OrderByDescending(c => c.ProfId).ToList();
+                return null;
             }
         }
     }
