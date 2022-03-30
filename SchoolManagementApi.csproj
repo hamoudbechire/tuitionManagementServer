@@ -189,6 +189,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\ClasseController.cs" />
+    <Compile Include="Controllers\EtudiantController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MatiereController.cs" />
     <Compile Include="Controllers\ProffesseurController.cs" />
@@ -292,7 +294,7 @@
       <Name>BusinessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="EntityLayer\EntityLayer.csproj">
-      <Project>{26a0aa67-6d0c-4e44-a395-ec6e20761362}</Project>
+      <Project>{26A0AA67-6D0C-4E44-A395-EC6E20761362}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>

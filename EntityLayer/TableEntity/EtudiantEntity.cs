@@ -20,7 +20,7 @@ namespace EntityLayer.TableEntity
         public string LastName { get; set; }
         [JsonProperty("phone")]
         public string Phone { get; set; }
-        [JsonProperty("classes")]
-        public List<ClasseEntity> Classes { get; set; }
+        //[JsonProperty("classes")]
+        //public List<ClasseEntity> Classes { get; set; }
     }
 }

@@ -7,39 +7,39 @@ using System.Threading.Tasks;
 
 namespace DataLayer.DataProvider
 {
-    public class EtudiantProvider
+    public class ClasseProvider
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static bool Add(EtudiantEntity etudiant)
+        public static bool Add(ClasseEntity classe)
         {
-            if (etudiant == null)
+            if (classe == null)
                 return false;
 
 
-            var result = DatabaseConnection.Add<EtudiantEntity>(etudiant);
+            var result = DatabaseConnection.Add<ClasseEntity>(classe);
             return result;
         }
 
-        public static bool Remove(EtudiantEntity etudiant)
+        public static bool Remove(ClasseEntity classe)
         {
-            if (etudiant == null)
+            if (classe == null)
                 return false;
-            return DatabaseConnection.Remove<EtudiantEntity>(c => c.EtudiantId == etudiant.EtudiantId);
+            return DatabaseConnection.Remove<ClasseEntity>(c => c.ClasseId == classe.ClasseId);
         }
 
 
-        public static bool Modify(EtudiantEntity etudiant)
+        public static bool Modify(ClasseEntity classe)
         {
-            if (etudiant == null)
+            if (classe == null)
                 return false;
 
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
                 try
                 {
-
-                    context.Entry<EtudiantEntity>(etudiant).State = System.Data.Entity.EntityState.Modified;
+                  
+                    context.Entry<ClasseEntity>(classe).State = System.Data.Entity.EntityState.Modified;
                     context.SaveChanges();
                     return true;
                 }
@@ -50,5 +50,6 @@ namespace DataLayer.DataProvider
                 }
             }
         }
+
     }
 }

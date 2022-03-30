@@ -60,6 +60,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="ConnectionDataBase.cs" />
     <Compile Include="DataProvider\AdminProvider.cs" />
+    <Compile Include="DataProvider\ClasseProvider.cs" />
     <Compile Include="DataProvider\EtudiantProvider.cs" />
     <Compile Include="DataProvider\MatiereProvider.cs" />
     <Compile Include="DataProvider\ProffesseurProvider.cs" />
