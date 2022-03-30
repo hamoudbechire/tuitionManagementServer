@@ -61,6 +61,8 @@
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="ManageClasse.cs" />
     <Compile Include="ManageEtudiant.cs" />
+    <Compile Include="ManageMatiere.cs" />
+    <Compile Include="ManageProffesseur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
