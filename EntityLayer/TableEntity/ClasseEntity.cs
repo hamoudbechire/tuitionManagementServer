@@ -14,7 +14,10 @@ namespace EntityLayer.TableEntity
     {
 
         [Key] 
-        public int ClasseId { get; set; } 
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string ClassName { get; set; } 
+        public List<EtudiantEntity> etudiants { get; set; }
+       // public List<EtudiantEntity> etudiants { get; set; }
     }
 }

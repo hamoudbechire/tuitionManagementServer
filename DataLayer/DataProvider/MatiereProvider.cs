@@ -69,8 +69,8 @@ namespace DataLayer
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                var list = context.matieres.Where(condition).OrderByDescending(c => c.IdMatiere).ToList();
-                return list;
+                //var list = context.matieres.Where(condition).OrderByDescending(c => c.IdMatiere).ToList();
+                return null; //s list;
             }
         }
     }

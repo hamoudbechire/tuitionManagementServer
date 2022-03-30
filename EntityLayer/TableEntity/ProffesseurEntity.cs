@@ -1,25 +1,27 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EntityLayer.TableEntity
+namespace EntityLayer
+
 {
-    [Table("Proffesseur")]
+    [Table("Professeurs")]
     public class ProffesseurEntity
     {
        // [ForeignKey("Category")]
-
+        
         [Key]
         [JsonProperty("ProfId")]
-        public int ProfId { get; set; } 
+        public int ProfId { get; set; }
         public string FirstName { get; set; } 
         public string LastName { get; set; } 
-        public string Mail { get; set; } 
+        [JsonProperty("mail")]
+        public string Mail { get; set; }
         public string Phone { get; set; } 
         public int MatierId { get; set; } 
     }

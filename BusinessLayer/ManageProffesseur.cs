@@ -1,5 +1,5 @@
 ﻿using DataLayer;
-using EntityLayer.TableEntity;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

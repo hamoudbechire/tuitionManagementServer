@@ -12,7 +12,7 @@ namespace EntityLayer.TableEntity
     public class EtudiantEntity
     {
         [Key] 
-        public int EtudiantId { get; set; } 
+        public int EtudiantId { get; set; }
         public string FirstName { get; set; } 
         public string LastName { get; set; } 
         public string Phone { get; set; } 

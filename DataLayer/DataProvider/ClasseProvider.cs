@@ -25,7 +25,7 @@ namespace DataLayer.DataProvider
         {
             if (classe == null)
                 return false;
-            return DatabaseConnection.Remove<ClasseEntity>(c => c.ClasseId == classe.ClasseId);
+            return DatabaseConnection.Remove<ClasseEntity>(c => c.Id == classe.Id);
         }
 
 
@@ -55,8 +55,8 @@ namespace DataLayer.DataProvider
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                var list_classe = context.classes.ToList();
-                return list_classe;
+                //var list_classe = context.classes.ToList();
+                return null; // list_classe;
             }
         }
 

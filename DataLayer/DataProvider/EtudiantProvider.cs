@@ -18,7 +18,7 @@ namespace DataLayer.DataProvider
 
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                var list_classe = context.classes.ToList();
+                //var list_classe = context.classes.ToList();
                 
             }
             var result = DatabaseConnection.Add<EtudiantEntity>(etudiant);
@@ -29,7 +29,7 @@ namespace DataLayer.DataProvider
         {
             if (etudiant == null)
                 return false;
-            return DatabaseConnection.Remove<EtudiantEntity>(c => c.EtudiantId == etudiant.EtudiantId);
+            return DatabaseConnection.Remove<EtudiantEntity>(c => c.Id == etudiant.Id);
         }
 
 
@@ -60,8 +60,8 @@ namespace DataLayer.DataProvider
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                var list_étudiant = context.etudiants.Include("classe").ToList();
-                return list_étudiant;
+                //var list_étudiant = context.etudiants.Include("classe").ToList();
+                return null; // list_étudiant;
             }
         }
         

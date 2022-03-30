@@ -1,5 +1,5 @@
 ﻿using BusinessLayer;
-using EntityLayer.TableEntity;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +23,7 @@ namespace SchoolManagementApi.Controllers
         }
         public ProffesseurEntity GET(int id)
         {
-            var prof = ManageProffesseur.ListProf(obj => obj.ProfId == id).FirstOrDefault();
+            var prof = ManageProffesseur.ListProf(obj => obj.Id == id).FirstOrDefault();
             return prof;
         }
         [AcceptVerbs("POST")]
@@ -31,7 +31,7 @@ namespace SchoolManagementApi.Controllers
         {
             var result = false;
             if(prof != null) {
-                if (prof.ProfId > 0)
+                if (prof.Id > 0)
                 {
                     result = ManageProffesseur.ModifyProf(prof);
                 }

@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
- 
 using EntityLayer;
- 
 using System.Linq.Expressions;
-using EntityLayer.TableEntity;
 
 namespace DataLayer
 {
@@ -64,7 +61,7 @@ namespace DataLayer
         {
             if (proffesseur == null)
                 return false;
-            return DatabaseConnection.Remove<ProffesseurEntity>(c => c.ProfId == proffesseur.ProfId);
+            return DatabaseConnection.Remove<ProffesseurEntity>(c => c.Id == proffesseur.Id);
         }
         public static List<ProffesseurEntity> List(Expression<Func<ProffesseurEntity, bool>> condition)
         {
