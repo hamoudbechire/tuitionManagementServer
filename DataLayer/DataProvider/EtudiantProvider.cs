@@ -50,5 +50,16 @@ namespace DataLayer.DataProvider
                 }
             }
         }
+
+
+        public static List<EtudiantEntity> List()
+        {
+            using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
+            {
+                var list_étudiant = context.etudiants.Include("classe").ToList();
+                return list_étudiant;
+            }
+        }
+        
     }
 }
