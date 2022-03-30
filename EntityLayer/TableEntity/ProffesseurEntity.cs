@@ -16,8 +16,8 @@ namespace EntityLayer
        // [ForeignKey("Category")]
         
         [Key]
-        [JsonProperty("ProfId")]
-        public int ProfId { get; set; }
+        [JsonProperty("idProf")]
+        public int Id { get; set; }
         public string FirstName { get; set; } 
         public string LastName { get; set; } 
         [JsonProperty("mail")]

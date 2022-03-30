@@ -55,8 +55,8 @@ namespace DataLayer.DataProvider
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                //var list_classe = context.classes.ToList();
-                return null; // list_classe;
+                var list_classe = context.Classes.ToList();
+                return list_classe;
             }
         }
 

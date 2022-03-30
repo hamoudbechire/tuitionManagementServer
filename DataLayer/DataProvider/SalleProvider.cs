@@ -63,8 +63,8 @@ namespace DataLayer
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                //var list = context.Salles.Where(condition).OrderByDescending(s => s.Id).ToList();
-                return null; // list;
+                var list = context.Salles.Where(condition).OrderByDescending(s => s.Id).ToList();
+                return list;
             }
         }
     }

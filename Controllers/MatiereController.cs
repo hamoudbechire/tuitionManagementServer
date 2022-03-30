@@ -19,7 +19,7 @@ namespace SchoolManagementApi.Controllers
         // GET: Matiere by id
         public MatiereEntity Get(int id)
         {
-            return ManageMatiere.ListMatiere(obj => obj.IdMatiere == id).FirstOrDefault();
+            return ManageMatiere.ListMatiere(obj => obj.Id == id).FirstOrDefault();
         }
         // Post Matiere
         public bool Post(MatiereEntity matiere)
@@ -27,7 +27,7 @@ namespace SchoolManagementApi.Controllers
             var result = false;
             if(matiere != null)
             {
-                if (matiere.IdMatiere > 0)
+                if (matiere.Id > 0)
                 {
                     result = ManageMatiere.ModifyMatiere(matiere);
                 }

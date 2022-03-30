@@ -63,14 +63,14 @@ namespace DataLayer
         {
             if (etudiant == null)
                 return false;
-            return DatabaseConnection.Remove<MatiereEntity>(c => c.IdMatiere == etudiant.IdMatiere);
+            return DatabaseConnection.Remove<MatiereEntity>(c => c.Id == etudiant.Id);
         }
         public static List<MatiereEntity> List(Expression<Func<MatiereEntity, bool>> condition)
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                //var list = context.matieres.Where(condition).OrderByDescending(c => c.IdMatiere).ToList();
-                return null; //s list;
+                var list = context.Matieres.Where(condition).OrderByDescending(c => c.Id).ToList();
+                return list;
             }
         }
     }

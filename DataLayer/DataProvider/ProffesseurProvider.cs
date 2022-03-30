@@ -67,7 +67,7 @@ namespace DataLayer
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-               var list = context.proffesseurs.Where(condition).OrderByDescending(c => c.ProfId).ToList();
+               var list = context.Proffesseurs.Where(condition).OrderByDescending(c => c.Id).ToList();
                 return list;
             }
         }
