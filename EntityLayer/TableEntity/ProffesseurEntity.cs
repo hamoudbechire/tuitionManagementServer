@@ -6,24 +6,19 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace EntityLayer.TableEntity
 {
     [Table("Proffesseur")]
     public class ProffesseurEntity
     {
-        
-        [JsonProperty("profId")]
-        [Key]
-        public int ProfId { get; set; }
-        [JsonProperty("firstName")]
-        public string FirstName { get; set; }
-        [JsonProperty("lastName")]
-        public string LastName { get; set; }
-        [JsonProperty("mail")]
-        public string Mail { get; set; }
-        [JsonProperty("phone")]
-        public string Phone { get; set; }
-        [JsonProperty("matierId")]
-        public int matierId { get; set; }
+
+        [Key] 
+        public int ProfId { get; set; } 
+        public string FirstName { get; set; } 
+        public string LastName { get; set; } 
+        public string Mail { get; set; } 
+        public string Phone { get; set; } 
+        public int MatierId { get; set; }
     }
 }

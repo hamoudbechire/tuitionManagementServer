@@ -30,9 +30,13 @@ namespace DataLayer
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<MatiereEntity> matieres { get; set; }
+<<<<<<< HEAD
         public DbSet<ProffesseurEntity> proffesseurs { get; set; }
         public DbSet<EtudiantEntity> etudiants { get; set; }
         public DbSet<ClasseEntity> classes { get; set; }
 
+=======
+        public DbSet<ProffesseurEntity> proffesseurs { get; set; } 
+>>>>>>> 4b16feb (resoulution probleme connection DB)
     }
 }

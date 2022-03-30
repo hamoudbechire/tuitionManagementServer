@@ -19,7 +19,7 @@ namespace EntityLayer.TableEntity
         [JsonProperty("className")]
         public string ClassName { get; set; }
         public List<EtudiantEntity> etudiants { get; set; }
-        public List<ProffesseurEntity> proffesseurs { get; set; }
+        public List<ProffesseurEntity> profs { get; set; }
 
 
     }
