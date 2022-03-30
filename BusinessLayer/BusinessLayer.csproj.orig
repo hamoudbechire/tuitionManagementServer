@@ -59,13 +59,15 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DatabaseConnection.cs" />
-<<<<<<< HEAD
-    <Compile Include="ManageMatiere.cs" />
-    <Compile Include="ManageProffesseur.cs" />
-=======
+    <Compile Include="ManageAdmin.cs" />
     <Compile Include="ManageClasse.cs" />
     <Compile Include="ManageEtudiant.cs" />
->>>>>>> 8d56449 (add provider and manage to Etudiant and classe)
+    <Compile Include="ManageMatiere.cs" />
+    <Compile Include="ManageProffesseur.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="ManageSalle.cs" />
+>>>>>>> eb7c4e7 (complette admin and salle couchs and controllers)
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

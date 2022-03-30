@@ -36,7 +36,10 @@ namespace DataLayer
         public DbSet<ClasseEntity> classes { get; set; }
 
 =======
-        public DbSet<ProffesseurEntity> proffesseurs { get; set; } 
->>>>>>> 4b16feb (resoulution probleme connection DB)
+        public DbSet<AdminEntity> Admins { get; set; }
+        public DbSet<SalleEntity> Salles { get; set; }
+
+        //  public DbSet<ProffesseurEntity> proffesseurs { get; set; }
+>>>>>>> eb7c4e7 (complette admin and salle couchs and controllers)
     }
 }
