@@ -12,13 +12,15 @@ namespace EntityLayer.TableEntity
     [Table("Proffesseur")]
     public class ProffesseurEntity
     {
+       // [ForeignKey("Category")]
 
-        [Key] 
+        [Key]
+        [JsonProperty("ProfId")]
         public int ProfId { get; set; } 
         public string FirstName { get; set; } 
         public string LastName { get; set; } 
         public string Mail { get; set; } 
         public string Phone { get; set; } 
-        public int MatierId { get; set; }
+        public int MatierId { get; set; } 
     }
 }

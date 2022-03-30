@@ -15,7 +15,7 @@ namespace EntityLayer
         [Key]
         [JsonProperty("adminId")]
         public int Id { get; set; }
-        [JsonProperty("firstName")]
+        [JsonProperty("firstName")] 
         public string FirstName { get; set; }
         [JsonProperty("lastName")]
         public string LastName { get; set; }
