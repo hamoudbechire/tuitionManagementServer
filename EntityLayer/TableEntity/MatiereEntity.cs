@@ -13,9 +13,10 @@ namespace EntityLayer.TableEntity
     public class MatiereEntity
     {
         [Key]
+        [JsonProperty("idMatiere")]
         public int Id { get; set; }
+        [JsonProperty("nameMatiere")]
         public string Name { get; set; }
-        public int IdClass { get; set; }
-        public int IdProf { get; set; }
+       
     }
 }

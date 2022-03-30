@@ -23,7 +23,7 @@ namespace SchoolManagementApi.Controllers
         [AllowAnonymous]
         public List<EtudiantEntity> GetById(int id)
         {
-            return ManageEtudiant.ListEtudiant(t => (t.Id == id));
+            return ManageEtudiant.ListEtudiant(t => (t.EtudiantId == id));
         }
 
     }
