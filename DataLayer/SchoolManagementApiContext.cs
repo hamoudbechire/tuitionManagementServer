@@ -33,6 +33,10 @@ namespace DataLayer
         public DbSet<ProffesseurEntity> proffesseurs { get; set; }
         public DbSet<EtudiantEntity> etudiants { get; set; }
         public DbSet<ClasseEntity> classes { get; set; }
+        public DbSet<AdminEntity> Admins { get; set; }
+        public DbSet<SalleEntity> Salles { get; set; }
+
+        //  public DbSet<ProffesseurEntity> proffesseurs { get; set; }
 
     }
 }

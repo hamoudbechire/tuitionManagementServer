@@ -59,10 +59,12 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="ManageAdmin.cs" />
     <Compile Include="ManageClasse.cs" />
     <Compile Include="ManageEtudiant.cs" />
     <Compile Include="ManageMatiere.cs" />
     <Compile Include="ManageProffesseur.cs" />
+    <Compile Include="ManageSalle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
