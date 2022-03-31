@@ -27,6 +27,10 @@ namespace BusinessLayer
         {
             return EtudiantProvider.Modify(etudiant);
         }
+        public static bool RemoveEtudiant(EtudiantEntity etudiant)
+        {
+            return EtudiantProvider.Remove(etudiant);
+        }
         
     }
 }

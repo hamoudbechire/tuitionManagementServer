@@ -13,11 +13,12 @@ namespace EntityLayer.TableEntity
     public class ClasseEntity
     {
 
-        [Key] 
+        [Key]
+        [JsonProperty("classeId")]
         public int Id { get; set; }
+        [JsonProperty("name")]
         public string Name { get; set; }
-        public string ClassName { get; set; } 
+        [JsonProperty("etudiants")]
         public List<EtudiantEntity> etudiants { get; set; }
-       // public List<EtudiantEntity> etudiants { get; set; }
     }
 }

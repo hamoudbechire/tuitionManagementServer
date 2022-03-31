@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace BusinessLayer
 {
@@ -15,9 +16,19 @@ namespace BusinessLayer
             return ClasseProvider.Add(classe);
         }
 
-        public static bool DeleteProf(ClasseEntity classe)
+        public static bool RemoveClasse(ClasseEntity classe)
         {
             return ClasseProvider.Remove(classe);
+        }
+
+        public static List<ClasseEntity> ListClasse(Expression<Func<ClasseEntity, bool>> condition)
+        {
+            return ClasseProvider.List();
+        }
+
+        public static bool UpdateClasse(ClasseEntity classe)
+        {
+            return ClasseProvider.Modify(classe);
         }
     }
 }

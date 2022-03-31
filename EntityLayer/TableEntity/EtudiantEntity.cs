@@ -11,10 +11,19 @@ namespace EntityLayer.TableEntity
     [Table("etudiant")]
     public class EtudiantEntity
     {
-        [Key] 
-        public int EtudiantId { get; set; }
-        public string FirstName { get; set; } 
-        public string LastName { get; set; } 
-        public string Phone { get; set; } 
+        [Key]
+        [JsonProperty("etudiantId")]
+        public int Id { get; set; }
+        [JsonProperty("firstName")]
+        public string FirstName { get; set; }
+        [JsonProperty("lastName")]
+        public string LastName { get; set; }
+        [JsonProperty("phone")]
+        public string Phone { get; set; }
+        [JsonProperty("classeServerId")]
+        public int? ClasseId { get; set; }
+        [JsonProperty("classe")]
+        [ForeignKey("classeID")]
+        public ClasseEntity Classe { get; set; }
     }
 }
