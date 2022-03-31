@@ -37,10 +37,26 @@ namespace SchoolManagementApi.Controllers
                 }
                 else
                 {
+                    if (prof.Media != null && prof.Media.Id < 0) {
+                        ManageMatiere.NewMatiere(prof.Media);
+                    }
                     result = ManageProffesseur.NewProf(prof);
                 }
             } 
                 
+            return result;
+        }
+
+        [AcceptVerbs("DELETE")]
+        public bool Delete(int id)
+        {
+            var result = false;
+            var prof = GET(id);
+            if (prof != null)
+            {
+                result = ManageProffesseur.DeleteProf(prof);
+            }
+
             return result;
         }
     }
