@@ -31,6 +31,6 @@ namespace EntityLayer
         public int? MatiereId { get; set; }
         [JsonProperty("matiere")]
         [ForeignKey("MatiereId")]
-        public MatiereEntity Media { get; set; }
+        public MatiereEntity Matiere { get; set; }
     }
 }

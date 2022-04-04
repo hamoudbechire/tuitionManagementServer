@@ -37,8 +37,8 @@ namespace SchoolManagementApi.Controllers
                 }
                 else
                 {
-                    if (prof.Media != null && prof.Media.Id < 0) {
-                        ManageMatiere.NewMatiere(prof.Media);
+                    if (prof.Matiere != null && prof.Matiere.Id < 0) {
+                        ManageMatiere.NewMatiere(prof.Matiere);
                     }
                     result = ManageProffesseur.NewProf(prof);
                 }

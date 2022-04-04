@@ -30,6 +30,19 @@ namespace SchoolManagementApi.Controllers
                 if (matiere.Id > 0)
                 {
                     result = ManageMatiere.ModifyMatiere(matiere);
+                    var prof = ManageProffesseur.ListProf(obj => obj.MatiereId == matiere.Id).FirstOrDefault();
+                    if (prof != null)
+                    {
+                        //prof.Matiere = null;
+                        //ManageProffesseur.ModifyProf(prof);
+                    }
+                    //foreach(var prof in profs)
+                    //{
+                    //    if (prof != null)
+                    //    {
+                    //        ManageProffesseur.ModifyProf(prof);
+                    //    }
+                    //}
                 }
                 else
                 {
@@ -44,6 +57,7 @@ namespace SchoolManagementApi.Controllers
         }
 
         // Delete Matiere By Id
+        [AcceptVerbs("DELETE")]
         public bool Delete(int id)
         {
             var result = false;
