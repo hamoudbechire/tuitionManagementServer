@@ -1,4 +1,4 @@
-﻿using EntityLayer.TableEntity;
+using EntityLayer.TableEntity;
 using BusinessLayer;
 using System;
 using System.Collections.Generic;
@@ -12,27 +12,43 @@ namespace SchoolManagementApi.Controllers
     public class EtudiantController : ApiController
     {
         [AllowAnonymous]
-        // POST api/emails
-        public bool Post([FromBody] EtudiantEntity etudiant)
+        [AcceptVerbs("POST")]
+        [Route("api/etudiant/add")]
+        public bool AddNewEtudiant([FromBody] EtudiantEntity etudiant)
         {
             return ManageEtudiant.NewEtudiant(etudiant);
-           // return "je confirmation mon execution";
         }
-
-
         [AllowAnonymous]
-        public List<EtudiantEntity> GetById(int id)
+        [AcceptVerbs("GET")]
+        [Route("api/etudiant/list")]
+        public List<EtudiantEntity> GetAllEtudiant()
+        {
+
+  
+
+            var etudiants = ManageEtudiant.ListEtudiant(obj => true);
+            return etudiants;
+
+        }
+        [AllowAnonymous]
+        [AcceptVerbs("GET")]
+        [Route("api/etudiant")]
+        public List<EtudiantEntity> GetEtudiantById(int id)
         {
             return ManageEtudiant.ListEtudiant(t => (t.Id == id));
         }
+        [AllowAnonymous]
+        [AcceptVerbs("PUT")]
+        [Route("api/etudiant/update/id")]
 
-        public void EditerEtudiant([FromBody] EtudiantEntity etudiant)
+        public void EditEtudiant([FromBody] EtudiantEntity etudiant)
         {
             ManageEtudiant.UpdateEtudiant(etudiant);
         }
-
-        // DELETE api/emails/5
-        public void Delete(int id)
+        [AllowAnonymous]
+        [AcceptVerbs("DELETE")]
+        [Route("api/etudiant/delete/{id}")]
+        public void DeleteEtudiant(int id)
         {
             var item = ManageEtudiant.ListEtudiant(i => i.Id == id).FirstOrDefault();
             if (item != null)
