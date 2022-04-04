@@ -61,9 +61,11 @@
     <Compile Include="ConnectionDataBase.cs" />
     <Compile Include="DataProvider\AdminProvider.cs" />
     <Compile Include="DataProvider\ClasseProvider.cs" />
+    <Compile Include="DataProvider\ClientProvider.cs" />
     <Compile Include="DataProvider\EtudiantProvider.cs" />
     <Compile Include="DataProvider\MatiereProvider.cs" />
     <Compile Include="DataProvider\ProffesseurProvider.cs" />
+    <Compile Include="DataProvider\RefreshTokensProvider.cs" />
     <Compile Include="DataProvider\SalleProvider.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -23,7 +23,7 @@ namespace EntityLayer.TableEntity
         [JsonProperty("classeServerId")]
         public int? ClasseId { get; set; }
         [JsonProperty("classe")]
-        [ForeignKey("classeID")]
+        [ForeignKey("ClasseId")]
         public ClasseEntity Classe { get; set; }
     }
 }

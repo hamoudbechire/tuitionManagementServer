@@ -18,7 +18,7 @@ namespace EntityLayer.TableEntity
         public int Id { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
-        [JsonProperty("etudiants")]
-        public List<EtudiantEntity> etudiants { get; set; }
+        //[JsonProperty("etudiants")]
+        //public List<EtudiantEntity> etudiants { get; set; }
     }
 }

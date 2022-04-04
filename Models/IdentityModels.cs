@@ -1,14 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.Entity;
-using Microsoft.AspNet.Identity.EntityFramework;
- 
-using System.Threading.Tasks;
-using System.Security.Claims;
-using Microsoft.AspNet.Identity;
 
+using System.Threading.Tasks;
+using System.Linq;
+using System.Security.Claims;
+using System.Web;
+using Microsoft.AspNet.Identity;
 
 namespace SchoolManagementApi.Models
 {
@@ -36,7 +34,7 @@ namespace SchoolManagementApi.Models
             return new ApplicationDbContext();
         }
 
-         
+        //public System.Data.Entity.DbSet<EntityLayer.LabelEntity> LabelEntities { get; set; }
         //public System.Data.Entity.DbSet<EntityLayer.ATestEntity> Atests { get; set; }
     }
 }

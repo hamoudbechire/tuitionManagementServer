@@ -61,9 +61,11 @@
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="ManageAdmin.cs" />
     <Compile Include="ManageClasse.cs" />
+    <Compile Include="ManageClient.cs" />
     <Compile Include="ManageEtudiant.cs" />
     <Compile Include="ManageMatiere.cs" />
     <Compile Include="ManageProffesseur.cs" />
+    <Compile Include="ManageRefreshTokens.cs" />
     <Compile Include="ManageSalle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

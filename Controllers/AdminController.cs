@@ -6,6 +6,10 @@ using System.Web.Http;
 using EntityLayer;
 using BusinessLayer;
 using System.Threading.Tasks;
+ 
+using System.Net;
+using System.Net.Mail;
+ 
 
 namespace SchoolManagementApi.Controllers
 {

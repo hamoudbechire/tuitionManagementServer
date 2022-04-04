@@ -35,6 +35,8 @@ namespace DataLayer
         public DbSet<AdminEntity> Admins { get; set; }
         public DbSet<SalleEntity> Salles { get; set; }
         public DbSet<ProffesseurEntity> Proffesseurs { get; set; }
+        public DbSet<ClientEntity> Clients { get; set; }
+        public DbSet<RefreshTokenEntity> RefreshTokens { get; set; }
 
     }
 }

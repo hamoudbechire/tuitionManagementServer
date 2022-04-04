@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace SchoolManagementApi.Controllers
 {
+    [Authorize]
     public class MatiereController : ApiController
     {
         // GET: All Matiere

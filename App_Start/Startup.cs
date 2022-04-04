@@ -4,7 +4,7 @@ using Owin;
 using System.Web.Http;
 using System;
 using BusinessLayer;
-//using MarketPlaceServerWebApi.Providers;
+using SchoolManagementApi.Providers; 
 
 namespace SchoolManagementApi
 {
@@ -15,7 +15,7 @@ namespace SchoolManagementApi
 
             HttpConfiguration config = new HttpConfiguration();
             config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            //ConfigureOAuth(app);
+            ConfigureOAuth(app);
             WebApiConfig.Register(config);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(config);
@@ -23,24 +23,24 @@ namespace SchoolManagementApi
             log4net.Config.XmlConfigurator.Configure();
         }
 
-        //public void ConfigureOAuth(IAppBuilder app)
-        //{
+        public void ConfigureOAuth(IAppBuilder app)
+        {
 
-        //    OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
-        //    {
+            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+            {
 
-        //        AllowInsecureHttp = true,
-        //        TokenEndpointPath = new PathString("/token"),
-        //        AccessTokenExpireTimeSpan = TimeSpan.FromDays(365),
-        //        Provider = new SimpleAuthorizationServerProvider(),
-        //        RefreshTokenProvider = new SimpleRefreshTokenProvider()
-        //    };
+                AllowInsecureHttp = true,
+                TokenEndpointPath = new PathString("/token"),
+                AccessTokenExpireTimeSpan = TimeSpan.FromDays(365),
+                Provider = new SimpleAuthorizationServerProvider(),
+                RefreshTokenProvider = new SimpleRefreshTokenProvider()
+            };
 
-        //    // Token Generation
-        //    app.UseOAuthAuthorizationServer(OAuthServerOptions);
+            // Token Generation
+            app.UseOAuthAuthorizationServer(OAuthServerOptions);
 
-        //    app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+            app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
 
-        //}
+        }
     }
 }

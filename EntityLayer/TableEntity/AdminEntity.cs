@@ -21,9 +21,23 @@ namespace EntityLayer
         public string LastName { get; set; }
         [JsonProperty("email")]
         public string Email { get; set; }
+        [JsonProperty("identifiant")]
+        public string Identifiant { get; set; }
         [JsonProperty("phone")]
         public string Phone { get; set; }
         [JsonProperty("profilImageUrl")]
         public string ProfilImageUrl { get; set; }
+        [JsonProperty("password")]
+        public string Password { get; set; }
+        [JsonProperty("confirmPassword")]
+        public string ConfirmPassword { get; set; }
+        [JsonProperty("creationDate")]
+        public DateTime CreationDate { get; set; }
+        [JsonProperty("modificationDate")]
+        public DateTime ModificationDate { get; set; }
+        [JsonProperty("type")]
+        public UserType Type { get; set; }
+        [JsonProperty("isActivated")]
+        public bool IsActivated { get; set; }
     }
 }
