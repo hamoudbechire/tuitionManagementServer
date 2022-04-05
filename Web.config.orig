@@ -11,13 +11,14 @@
   <connectionStrings>
     <!--<add name="MarketPlaceApiContext" connectionString="Server=tcp:agri-bank-server.database.windows.net,1433;Initial Catalog=AgriBankDB;Persist Security Info=False;User ID=agri-bank-server;Password=Smpnt2018&amp;a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />-->
 <<<<<<< HEAD
-    <add name="SchoolManagementApiContext" connectionString="Data Source=DESKTOP-HF8887S;User Id=sa;Password=123456; Initial Catalog=SchoolDB" providerName="System.Data.SqlClient" />
-=======
-    <add name="SchoolManagementApiContext" connectionString="Data Source=DESKTOP-VT1TKP0;User Id=sa;Password=smpnt; Initial Catalog=SchoolDB" providerName="System.Data.SqlClient" />
->>>>>>> eb7c4e7 (complette admin and salle couchs and controllers)
-	  <!--<add name="SchoolManagementApiContext" connectionString="Data Source=DESKTOP-8D559MT;User Id=sa;Password=123456; Initial Catalog=SchoolDB" providerName="System.Data.SqlClient" />-->
+    <!--<add name="SchoolManagementApiContext" connectionString="Data Source=DESKTOP-HF8887S;User Id=sa;Password=123456; Initial Catalog=SchoolDB" providerName="System.Data.SqlClient" />-->
+	<add name="SchoolManagementApiContext" connectionString="Data Source=DESKTOP-8D559MT;User Id=sa;Password=123456; Initial Catalog=SchoolDB" providerName="System.Data.SqlClient" /> 
 
 	  
+=======
+    <add name="SchoolManagementApiContext" connectionString="Data Source=DESKTOP-VT1TKP0;User Id=sa;Password=smpnt; Initial Catalog=SchoolDB" providerName="System.Data.SqlClient" />
+	  <!--<add name="SchoolManagementApiContext" connectionString="Data Source=DESKTOP-8D559MT;User Id=sa;Password=123456; Initial Catalog=SchoolDB" providerName="System.Data.SqlClient" />-->
+>>>>>>> 35cce1e (add quelque fonctionnalité)
   </connectionStrings>
   <appSettings>
     <add key="webpages:Version" value="3.0.0.0" />
@@ -53,7 +54,7 @@
       </dependentAssembly>
       <dependentAssembly>
         <assemblyIdentity name="Newtonsoft.Json" culture="neutral" publicKeyToken="30ad4fe6b2a6aeed" />
-        <bindingRedirect oldVersion="0.0.0.0-12.0.0.0" newVersion="12.0.0.0" />
+        <bindingRedirect oldVersion="0.0.0.0-13.0.0.0" newVersion="13.0.0.0" />
       </dependentAssembly>
       <dependentAssembly>
         <assemblyIdentity name="System.Web.Optimization" publicKeyToken="31bf3856ad364e35" />

@@ -33,14 +33,19 @@ namespace SchoolManagementApi.Controllers
         public async Task<IHttpActionResult> AddAdmin([FromBody] AdminEntity a)
         {
             var result = false;
+            var admin = ManageAdmin.ListAdmin(p => p.Email == a.Email || (p.Phone != null && p.Phone == a.Phone)).FirstOrDefault();
+            if (admin != null)
+            {
+                return InternalServerError(new ArgumentException("You have Already an account !"));
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            //if (adress.ServerId == null)
-            //{ 
-            //    return BadRequest();
-            //}
+            if (a.Password != null)
+            {   
+                a.Password = Helper.GetHash(a.Password);
+            }
             if (a.Id > 0)
             {
 
@@ -62,7 +67,7 @@ namespace SchoolManagementApi.Controllers
 
             return Ok(a);
         }
-        [Authorize]
+        [AllowAnonymous]
         [AcceptVerbs("DELETE")]
         //[Route("api/employe/delete/{id}")]
         [Route("api/admins/delete/{id}")]
@@ -76,13 +81,30 @@ namespace SchoolManagementApi.Controllers
             }
             return Ok(result);
         }
-        [Authorize]
+        [AllowAnonymous]
         [AcceptVerbs("GET")]
         [Route("api/admins/one/{id}")]
         public IEnumerable<AdminEntity> GetOneAdmin(int Id)
         {
             return ManageAdmin.ListAdmin(a => (a.Id == Id));
         }
+        [AllowAnonymous]
+        [Route("api/admins/findAdmin/{phone}")]
+        public AdminEntity Get(string phone)
+        {
+            //var convertIdentifian = "";
+            //if (idnetifiant.Contains('~'))
+            //{
+            //    convertIdentifian = idnetifiant.Replace("~", "+");
+            //}
+            //else
+            //{
+            //    convertIdentifian = idnetifiant;
+            //}
+            var user = ManageAdmin.ListAdmin(i => (i.Phone == phone)).FirstOrDefault();
+            return user;
+        }
+
 
     }
 }

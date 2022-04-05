@@ -163,8 +163,11 @@
     <Compile Include="TableEntity\ClasseEntity.cs" />
     <Compile Include="TableEntity\ClientEntity.cs" />
     <Compile Include="TableEntity\EtudiantEntity.cs" />
+<<<<<<< HEAD
     <Compile Include="TableEntity\RefreshTokenEntity.cs" />
+=======
     <Compile Include="TableEntity\Helper.cs" />
+>>>>>>> 35cce1e (add quelque fonctionnalité)
     <Compile Include="TableEntity\SalleEntity.cs" />
     <Compile Include="TableEntity\MatiereEntity.cs" />
     <Compile Include="TableEntity\ProffesseurEntity.cs" />

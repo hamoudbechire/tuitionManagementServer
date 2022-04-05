@@ -13,11 +13,11 @@ namespace EntityLayer
     public class SalleEntity
     {
         [Key]
-        [JsonProperty("classId")]
+        [JsonProperty("salleId")]
         public int Id { get; set; }
         [JsonProperty("numSalle")]
         public string NumSalle { get; set; }
         [JsonProperty("libre")]
-        public Boolean Libre { get; set; } 
+        public Boolean Libre { get; set; }
     }
 }

@@ -58,7 +58,7 @@ namespace SchoolManagementApi.Controllers
 
             return Ok(s);
         }
-        [Authorize]
+        [AllowAnonymous]
         [AcceptVerbs("DELETE")]
         //[Route("api/employe/delete/{id}")]
         [Route("api/salles/delete/{id}")]
@@ -72,7 +72,7 @@ namespace SchoolManagementApi.Controllers
             }
             return Ok(result);
         }
-        [Authorize]
+        [AllowAnonymous]
         [AcceptVerbs("GET")]
         [Route("api/salles/one/{id}")]
         public IEnumerable<SalleEntity> GetOneSalle(int Id)

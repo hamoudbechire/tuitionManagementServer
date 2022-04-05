@@ -25,6 +25,8 @@ namespace EntityLayer
         public string Identifiant { get; set; }
         [JsonProperty("phone")]
         public string Phone { get; set; }
+        [JsonProperty("password")]
+        public string Password { get; set; }
         [JsonProperty("profilImageUrl")]
         public string ProfilImageUrl { get; set; }
         [JsonProperty("password")]

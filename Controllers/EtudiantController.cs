@@ -34,7 +34,7 @@ namespace SchoolManagementApi.Controllers
         [Route("api/etudiant/{id}")]
         public List<EtudiantEntity> GetEtudiantById(int id)
         {
-            return ManageEtudiant.ListEtudiant(t => (t.Id == id));
+            return ManageEtudiant.ListEtudiant(t => (t.EtudiantId == id));
         }
         [AcceptVerbs("PUT")]
         [Route("api/etudiant/update/{id}")]
