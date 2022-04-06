@@ -27,6 +27,11 @@ namespace EntityLayer
         public string Password { get; set; }
         [JsonProperty("profilImageUrl")]
         public string ProfilImageUrl { get; set; }
+<<<<<<< HEAD
+        [JsonProperty("password")]
+        public string Password { get; set; } 
+=======
+>>>>>>> 2281b6c (update api admin)
         [JsonProperty("creationDate")]
         public DateTime CreationDate { get; set; }
         [JsonProperty("modificationDate")]
