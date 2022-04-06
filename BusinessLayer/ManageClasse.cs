@@ -23,7 +23,7 @@ namespace BusinessLayer
 
         public static List<ClasseEntity> ListClasse(Expression<Func<ClasseEntity, bool>> condition)
         {
-            return ClasseProvider.List();
+            return ClasseProvider.List(condition);
         }
 
         public static bool UpdateClasse(ClasseEntity classe)

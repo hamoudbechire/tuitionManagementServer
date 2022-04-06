@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -55,16 +56,16 @@ namespace DataLayer.DataProvider
                 }
             }
         }
-
-
-        public static List<EtudiantEntity> List()
+        public static List<EtudiantEntity> List(Expression<Func<EtudiantEntity, bool>> condition)
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                var list_étudiant = context.Etudiants.Include("classe").ToList();
-                return list_étudiant;
+                var list = context.Etudiants.Where(condition).OrderByDescending(c => c.Id).ToList();
+                return list;
             }
         }
+
+      
         
     }
 }

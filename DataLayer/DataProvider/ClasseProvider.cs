@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,15 +52,15 @@ namespace DataLayer.DataProvider
             }
         }
 
-        public static List<ClasseEntity> List()
+       
+        public static List<ClasseEntity> List(Expression<Func<ClasseEntity, bool>> condition)
         {
             using (var context = new SchoolManagementApiContext(DatabaseConnection.ConnectionString))
             {
-                var list_classe = context.Classes.ToList();
-                return list_classe;
+                var list = context.Classes.Where(condition).OrderByDescending(c => c.Id).ToList();
+                return list;
             }
         }
-
 
 
     }

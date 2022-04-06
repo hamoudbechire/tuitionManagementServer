@@ -20,7 +20,7 @@ namespace BusinessLayer
 
         public static List<EtudiantEntity> ListEtudiant(Expression<Func<EtudiantEntity, bool>> condition)
         {
-            return EtudiantProvider.List();
+            return EtudiantProvider.List(condition);
         }
 
         public static bool UpdateEtudiant(EtudiantEntity etudiant)

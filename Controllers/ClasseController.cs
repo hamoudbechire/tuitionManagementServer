@@ -14,32 +14,35 @@ namespace SchoolManagementApi.Controllers
         [AllowAnonymous]
         [AcceptVerbs("POST")]
         [Route("api/classe/post")]
-        public bool AddNewClasse([FromBody]  ClasseEntity classe)
+        public bool NewClasse(ClasseEntity classe)
         {
             return ManageClasse.NewClasse(classe);
         }
+
         [AllowAnonymous]
         [AcceptVerbs("GET")]
         [Route("api/classe/list")]
         public List<ClasseEntity> GetAllClasse()
         {
-            var classes = ManageClasse.ListClasse(obj => true);
-            return classes;
+            return ManageClasse.ListClasse(obj => true);
         }
         [AllowAnonymous]
-        [Route("api/classe/get/{id}")]
+        [AcceptVerbs("GET")]
+        [Route("api/classe/{id}")]
         public List<ClasseEntity> GetClasseById(int id)
         {
             return ManageClasse.ListClasse(t => (t.Id == id));
         }
+        [AllowAnonymous]
+        [AcceptVerbs("PUT")]
         [Route("api/classe/put/{id}")]
-        public void EditClasse([FromBody] ClasseEntity classe)
         {
             ManageClasse.UpdateClasse(classe);
         }
 
+        [AllowAnonymous]
+        [AcceptVerbs("DELETE")]
         [Route("api/classe/delete/{id}")]
-        public void DeleteClasse(int id)
         {
             var item = ManageClasse.ListClasse(i => i.Id == id).FirstOrDefault();
             if (item != null)
