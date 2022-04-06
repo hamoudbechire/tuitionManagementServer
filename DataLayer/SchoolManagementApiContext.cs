@@ -29,6 +29,7 @@ namespace DataLayer
         {
             base.OnModelCreating(modelBuilder);
         }
+        public DbSet<SeanceEntity> Seances { get; set; }
         public DbSet<MatiereEntity> Matieres { get; set; }
         public DbSet<EtudiantEntity> Etudiants { get; set; }
         public DbSet<ClasseEntity> Classes { get; set; }

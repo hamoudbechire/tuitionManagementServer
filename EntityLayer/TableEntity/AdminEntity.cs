@@ -31,10 +31,10 @@ namespace EntityLayer
         public DateTime CreationDate { get; set; }
         [JsonProperty("modificationDate")]
         public DateTime ModificationDate { get; set; }
-        [JsonProperty("type")]
-        public int Type { get; set; }
-        [JsonProperty("isActivated")]
-        public bool IsActivated { get; set; }
+        //[JsonProperty("type")]
+        //public int Type { get; set; }
+        //[JsonProperty("isActivated")]
+        //public bool IsActivated { get; set; }
 
     }
 }

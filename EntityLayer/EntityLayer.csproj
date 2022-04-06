@@ -167,6 +167,7 @@
     <Compile Include="TableEntity\SalleEntity.cs" />
     <Compile Include="TableEntity\MatiereEntity.cs" />
     <Compile Include="TableEntity\ProffesseurEntity.cs" />
+    <Compile Include="TableEntity\SeanceEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

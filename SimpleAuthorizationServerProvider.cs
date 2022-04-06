@@ -110,11 +110,11 @@ namespace SchoolManagementApi.Providers
                     context.SetError("invalid_grant", "The user name or password is incorrect.");
                     return;
                 }
-                if (!user.IsActivated)
-                {
-                    context.SetError("invalid_grant", "Account is Disabled.");
-                    return;
-                }
+                //if (!user.IsActivated)
+                //{
+                //    context.SetError("invalid_grant", "Account is Disabled.");
+                //    return;
+                //}
 
             }
 

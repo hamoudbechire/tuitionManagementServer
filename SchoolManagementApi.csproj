@@ -342,6 +342,7 @@
     <Compile Include="Controllers\MatiereController.cs" />
     <Compile Include="Controllers\ProffesseurController.cs" />
     <Compile Include="Controllers\SalleController.cs" />
+    <Compile Include="Controllers\SeanceController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -410,6 +411,7 @@
     <Folder Include="Views\Matiere\" />
     <Folder Include="Views\Proffesseur\" />
     <Folder Include="Views\Salle\" />
+    <Folder Include="Views\Seance\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

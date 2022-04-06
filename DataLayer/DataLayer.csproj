@@ -67,6 +67,7 @@
     <Compile Include="DataProvider\ProffesseurProvider.cs" />
     <Compile Include="DataProvider\RefreshTokensProvider.cs" />
     <Compile Include="DataProvider\SalleProvider.cs" />
+    <Compile Include="DataProvider\SeanceProvider.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolManagementApiContext.cs" />

@@ -33,11 +33,11 @@ namespace SchoolManagementApi.Controllers
         public async Task<IHttpActionResult> AddAdmin([FromBody] AdminEntity a)
         {
             var result = false;
-            //var admin = ManageAdmin.ListAdmin(p => p.Email == a.Email || (p.Phone != null && p.Phone == a.Phone)).FirstOrDefault();
-            //if (admin != null)
-            //{
-            //    return InternalServerError(new ArgumentException("You have Already an account !"));
-            //}
+            var admin = ManageAdmin.ListAdmin(p => p.Email == a.Email || (p.Phone != null && p.Phone == a.Phone)).FirstOrDefault();
+            if (admin != null)
+            {
+                return InternalServerError(new ArgumentException("You have Already an account !"));
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest();
@@ -48,7 +48,7 @@ namespace SchoolManagementApi.Controllers
             }
             if (a.Id > 0)
             {
-                a.ModificationDate = new DateTime();
+                a.ModificationDate = DateTime.Now;
                 result = ManageAdmin.ModifyAdmin(a);
                 if (!result)
                 {
@@ -57,9 +57,8 @@ namespace SchoolManagementApi.Controllers
             }
             else
             {
-
-                a.CreationDate = new DateTime();
-                a.ModificationDate = new DateTime();
+                a.CreationDate = DateTime.Now;
+                a.ModificationDate = DateTime.Now;
                 result = ManageAdmin.NewAdmin(a);
             }
 
