@@ -18,7 +18,7 @@ namespace SchoolManagementApi
         }
         //private Object lockObject = new Object();
 
-        public async Task<AdminEntity> FindUser(string identifiant, string password, string clientId)
+        public async Task<AdminEntity> FindUser(string identifiant,string password, string clientId)
         {
             // var hashPasswod = Helper.GetHash(password);
             var passwordHashed = Helper.GetHash(password);
@@ -34,25 +34,25 @@ namespace SchoolManagementApi
             if (clientId == EntityLayer.Constants.SellerAppClientId)
             {
                 // AdminEntity Admin = ManageAdmin.ListAdmin(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == AdminType.Customer).FirstOrDefault();
-                AdminEntity admin = ManageAdmin.ListAdmin(u => ((u.Identifiant == convertIdentifian || u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed)).FirstOrDefault();
+                AdminEntity admin = ManageAdmin.ListAdmin(u => (( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed)).FirstOrDefault();
                 return admin;
             }
             if (clientId == EntityLayer.Constants.ExternalDeliveryAppClientId)
             {
                 // UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Customer).FirstOrDefault();
-                AdminEntity user = ManageAdmin.ListAdmin(u => ((u.Identifiant == convertIdentifian || u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed) && u.Type == UserType.ExternalDelivery).FirstOrDefault();
+                AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed ).FirstOrDefault();
                 return user;
             }
             if (clientId == EntityLayer.Constants.CustomerDeliveryClientId)
             {
                 // UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Customer).FirstOrDefault();
-                AdminEntity user = ManageAdmin.ListAdmin(u => ((u.Identifiant == convertIdentifian || u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed) && u.Type == UserType.CustomerDelivery).FirstOrDefault();
+                AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed ).FirstOrDefault();
                 return user;
             }
             else
             {
                 //  UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Seller).FirstOrDefault();
-                AdminEntity user = ManageAdmin.ListAdmin(u => ((u.Identifiant == convertIdentifian || u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed) && u.Type == UserType.Customer).FirstOrDefault();
+                AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed).FirstOrDefault();
 
                 return user;
             }
@@ -60,7 +60,7 @@ namespace SchoolManagementApi
         }
         public async Task<AdminEntity> FindUserByToken(string identifiant, string fbToken)
         {
-            AdminEntity user = ManageAdmin.ListAdmin(u => u.Identifiant == identifiant).FirstOrDefault();
+            AdminEntity user = ManageAdmin.ListAdmin(u => u.Phone == identifiant).FirstOrDefault();
             return user;
         }
 

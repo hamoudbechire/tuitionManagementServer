@@ -22,8 +22,6 @@ namespace DataLayer
         {
             if (admin == null)
                 return false;
-
-
             var result = DatabaseConnection.Add<AdminEntity>(admin);
             return result;
         }

@@ -157,14 +157,13 @@
     <Compile Include="CommonEntity.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="EntityCloner.cs" />
-    <Compile Include="Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableEntity\AdminEntity.cs" />
     <Compile Include="TableEntity\ClasseEntity.cs" />
     <Compile Include="TableEntity\ClientEntity.cs" />
     <Compile Include="TableEntity\EtudiantEntity.cs" />
-    <Compile Include="TableEntity\RefreshTokenEntity.cs" />
     <Compile Include="TableEntity\Helper.cs" />
+    <Compile Include="TableEntity\RefreshTokenEntity.cs" />
     <Compile Include="TableEntity\SalleEntity.cs" />
     <Compile Include="TableEntity\MatiereEntity.cs" />
     <Compile Include="TableEntity\ProffesseurEntity.cs" />

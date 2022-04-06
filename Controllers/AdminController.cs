@@ -13,7 +13,7 @@ using System.Net.Mail;
 
 namespace SchoolManagementApi.Controllers
 {
-    [Authorize]
+   //:: [Authorize]
     [Route("api/admins")]
     public class AdminController : ApiController
     {
@@ -33,11 +33,11 @@ namespace SchoolManagementApi.Controllers
         public async Task<IHttpActionResult> AddAdmin([FromBody] AdminEntity a)
         {
             var result = false;
-            var admin = ManageAdmin.ListAdmin(p => p.Email == a.Email || (p.Phone != null && p.Phone == a.Phone)).FirstOrDefault();
-            if (admin != null)
-            {
-                return InternalServerError(new ArgumentException("You have Already an account !"));
-            }
+            //var admin = ManageAdmin.ListAdmin(p => p.Email == a.Email || (p.Phone != null && p.Phone == a.Phone)).FirstOrDefault();
+            //if (admin != null)
+            //{
+            //    return InternalServerError(new ArgumentException("You have Already an account !"));
+            //}
             if (!ModelState.IsValid)
             {
                 return BadRequest();
@@ -48,7 +48,7 @@ namespace SchoolManagementApi.Controllers
             }
             if (a.Id > 0)
             {
-
+                a.ModificationDate = new DateTime();
                 result = ManageAdmin.ModifyAdmin(a);
                 if (!result)
                 {
@@ -57,6 +57,9 @@ namespace SchoolManagementApi.Controllers
             }
             else
             {
+
+                a.CreationDate = new DateTime();
+                a.ModificationDate = new DateTime();
                 result = ManageAdmin.NewAdmin(a);
             }
 
