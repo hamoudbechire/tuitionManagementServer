@@ -14,7 +14,6 @@ namespace SchoolManagementApi.Controllers
         [AllowAnonymous]
         [AcceptVerbs("POST")]
         [Route("api/etudiant/add")]
-        public bool AddNewEtudiant([FromBody] EtudiantEntity etudiant)
         public bool NewEtudiant([FromBody] EtudiantEntity etudiant)
         {
             return ManageEtudiant.NewEtudiant(etudiant);
@@ -27,10 +26,9 @@ namespace SchoolManagementApi.Controllers
             return ManageEtudiant.ListEtudiant(obj => true);
         }
 
-            var etudiants = ManageEtudiant.ListEtudiant(obj => true);
-            return etudiants;
+           
 
-        }
+        
         [AllowAnonymous]
         [AcceptVerbs("GET")]
         [Route("api/etudiant/{id}")]
@@ -40,7 +38,6 @@ namespace SchoolManagementApi.Controllers
         }
         [AcceptVerbs("PUT")]
         [Route("api/etudiant/update/{id}")]
-        [Route("api/etudiant/update/id")]
         public void EditEtudiant([FromBody] EtudiantEntity etudiant)
         {
             ManageEtudiant.UpdateEtudiant(etudiant);

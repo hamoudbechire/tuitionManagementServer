@@ -36,6 +36,7 @@ namespace SchoolManagementApi.Controllers
         [AllowAnonymous]
         [AcceptVerbs("PUT")]
         [Route("api/classe/put/{id}")]
+        public void EditClasse([FromBody] ClasseEntity classe)
         {
             ManageClasse.UpdateClasse(classe);
         }
@@ -43,6 +44,7 @@ namespace SchoolManagementApi.Controllers
         [AllowAnonymous]
         [AcceptVerbs("DELETE")]
         [Route("api/classe/delete/{id}")]
+        public void DeleteClasse(int id)
         {
             var item = ManageClasse.ListClasse(i => i.Id == id).FirstOrDefault();
             if (item != null)
