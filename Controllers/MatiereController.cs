@@ -9,10 +9,11 @@ using System.Web.Http;
 
 namespace SchoolManagementApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class MatiereController : ApiController
     {
         // GET: All Matiere
+        [AllowAnonymous]
         public List<MatiereEntity> Get()
         {
             return ManageMatiere.ListMatiere(obj => true);
