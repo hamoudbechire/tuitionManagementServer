@@ -28,9 +28,7 @@ namespace EntityLayer
         [JsonProperty("profilImageUrl")]
         public string ProfilImageUrl { get; set; }
         [JsonProperty("password")]
-        public string Password { get; set; }
-        [JsonProperty("confirmPassword")]
-        public string ConfirmPassword { get; set; }
+        public string Password { get; set; } 
         [JsonProperty("creationDate")]
         public DateTime CreationDate { get; set; }
         [JsonProperty("modificationDate")]
