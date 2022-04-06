@@ -35,5 +35,6 @@ namespace EntityLayer
         public int Type { get; set; }
         [JsonProperty("isActivated")]
         public bool IsActivated { get; set; }
+
     }
 }

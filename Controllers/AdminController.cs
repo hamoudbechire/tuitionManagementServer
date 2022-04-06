@@ -76,6 +76,7 @@ namespace SchoolManagementApi.Controllers
         [Route("api/admins/delete/{id}")]
         public async Task<IHttpActionResult> DeleteAdmin(int id)
         {
+
             var result = false;
             var item = ManageAdmin.ListAdmin(a => a.Id == id).FirstOrDefault();
             if (item != null)
