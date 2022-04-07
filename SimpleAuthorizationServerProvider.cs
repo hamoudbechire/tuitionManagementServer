@@ -27,11 +27,6 @@ namespace SchoolManagementApi.Providers
 
 
 
-
-
-
-
-
             if (!context.TryGetBasicCredentials(out clientId, out clientSecret))
             {
                 context.TryGetFormCredentials(out clientId, out clientSecret);

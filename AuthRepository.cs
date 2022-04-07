@@ -31,31 +31,33 @@ namespace SchoolManagementApi
             {
                 convertIdentifian = identifiant;
             }
-            if (clientId == EntityLayer.Constants.SellerAppClientId)
-            {
-                // AdminEntity Admin = ManageAdmin.ListAdmin(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == AdminType.Customer).FirstOrDefault();
-                AdminEntity admin = ManageAdmin.ListAdmin(u => (( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed)).FirstOrDefault();
-                return admin;
-            }
-            if (clientId == EntityLayer.Constants.ExternalDeliveryAppClientId)
-            {
-                // UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Customer).FirstOrDefault();
-                AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed ).FirstOrDefault();
-                return user;
-            }
-            if (clientId == EntityLayer.Constants.CustomerDeliveryClientId)
-            {
-                // UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Customer).FirstOrDefault();
-                AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed ).FirstOrDefault();
-                return user;
-            }
-            else
-            {
-                //  UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Seller).FirstOrDefault();
-                AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed).FirstOrDefault();
+            AdminEntity user = ManageAdmin.ListAdmin(u => (u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed).FirstOrDefault();
+            return user;
 
-                return user;
-            }
+            //if (clientId == EntityLayer.Constants.SellerAppClientId)
+            //{
+            //    // AdminEntity Admin = ManageAdmin.ListAdmin(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == AdminType.Customer).FirstOrDefault();
+            //    AdminEntity admin = ManageAdmin.ListAdmin(u => (( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed)).FirstOrDefault();
+            //    return admin;
+            //}
+            //if (clientId == EntityLayer.Constants.ExternalDeliveryAppClientId)
+            //{
+            //    // UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Customer).FirstOrDefault();
+            //    AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed ).FirstOrDefault();
+            //    return user;
+            //}
+            //if (clientId == EntityLayer.Constants.CustomerDeliveryClientId)
+            //{
+            //    // UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Customer).FirstOrDefault();
+            //    AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed ).FirstOrDefault();
+            //    return user;
+            //}
+            //else
+            //{
+            //  UserEntity user = ManageUser.ListUser(u => ((u.Identifiant == identifiant || u.Email == identifiant) && u.Password == hashPasswod) && u.Type == UserType.Seller).FirstOrDefault();
+            //AdminEntity user = ManageAdmin.ListAdmin(u => ( u.Email == convertIdentifian || u.Phone == convertIdentifian) && u.Password == passwordHashed).FirstOrDefault();
+            //return user;
+            //}
 
         }
         public async Task<AdminEntity> FindUserByToken(string identifiant, string fbToken)
